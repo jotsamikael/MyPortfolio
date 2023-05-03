@@ -1,0 +1,147 @@
+<div class="navbar" style="cursor: pointer;">
+    <div class="logo" [routerLink]="['/']" (click)="navigationMobile()">
+        <span>My</span>
+        <span>Portfolio</span>
+    </div>
+
+    <div class="items">
+        <button mat-stroked-button [matMenuTriggerFor]="menuProducts">Portfolio
+            <mat-icon>expand_more</mat-icon>
+        </button>
+        <span routerLink="/projects">Featured</span>
+        <span routerLink="/education">Education</span>
+        <span routerLink="/certifications">Certifications</span>
+        <button mat-stroked-button [matMenuTriggerFor]="menuMore">More <mat-icon>expand_more</mat-icon></button>
+
+        <mat-menu #menuProducts="matMenu" class="menu">
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>language</mat-icon>
+                <div>
+                    <span class="item-title">Web development</span><br>
+                    <span class="item-contain">Both desktop, front-end, back-end web development projects.</span>
+                </div>
+            </div>
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>android</mat-icon>
+                <div>
+                    <span class="item-title">WhatsApp Bot development</span><br>
+                    <span class="item-contain">Bots developped using whatsapp API.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <mat-icon>wordpress</mat-icon>
+                <div>
+                    <span class="item-title">Wordpress websites</span><br>
+                    <span class="item-contain">Wordpress websites, including presentation, e-commerce, online course, charity etc</span>
+                </div>
+            </div>
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>photo</mat-icon>
+                <div>
+                    <span class="item-title">Infographics</span><br>
+                    <span class="item-contain">Design of flyers, business card, brochures, packaging etc etc.</span>
+                </div>
+            </div>
+                    <div class="menu-item" routerLink="/comingsoon">
+                        <mat-icon>schedule</mat-icon>
+                        <div>
+                            <span class="item-title">Video editing</span><br>
+                            <span class="item-contain">Video edition for ads, events, donations etc.</span>
+                        </div>
+                    </div>
+            <div class="last-item" routerLink="/comingsoon">
+                <span>
+                    <mat-icon>smart_display</mat-icon>Watch Demo
+                </span>
+                <span>
+                    <mat-icon>forum</mat-icon>Customer support
+                </span>
+            </div>
+        </mat-menu>
+
+        <mat-menu #menuMore="matMenu" class="menu">
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>forum</mat-icon>
+                <div>
+                    <span class="item-title">Customer support</span><br>
+                    <span class="item-contain">talk to our customer support team in person.</span>
+                </div>
+            </div>
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>library_books</mat-icon>
+                <div>
+                    <span class="item-title">Guides</span><br>
+                    <span class="item-contain">Learn how to maximize our product to get the most out of it.</span>
+                </div>
+            </div>
+            <div class="menu-item" routerLink="/comingsoon">
+                <mat-icon>alternate_email</mat-icon>
+                <div>
+                    <span class="item-title">About us</span><br>
+                    <span class="item-contain">Learn more how we started and our mission.</span>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+
+   <div class="options">
+        <button mat-stroked-button [routerLink]="['/login']" (click)="navigationMobile()"></button>
+        <button mat-flat-button color="primary" [routerLink]="['/contact']">Contact Me</button>
+        <div (click)="setVisible()">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+    </div>
+</div> 
+
+
+<div class="menu-smartphone" *ngIf="isVisible==true">
+    <div class="head-menu-smartphone">
+        <div>
+            <div class="logo">
+                <span>My</span>
+                <span>Portfolio</span>
+            </div>
+        </div>
+        <div (click)="setVisible()">
+            <mat-icon>close</mat-icon>
+        </div>
+    </div>
+    <div>
+        <div class="menu-item" routerLink="/comingsoon">
+            <mat-icon>local_mall</mat-icon>
+            <div>
+                <span class="item-title">Web development</span><br>
+            </div>
+        </div>
+        <div class="menu-item" routerLink="/comingsoon">
+            <mat-icon>link</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Link Generator</span><br>
+            </div>
+        </div>
+        <div class="menu-item" routerLink="/comingsoon">
+            <mat-icon>cell_tower</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Broadcast List Manager</span><br>
+            </div>
+        </div>
+        <div class="menu-item" routerLink="/comingsoon">
+            <mat-icon>schedule</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Booking Form</span><br>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="items-smartphone">
+        <span>Pricing</span>
+        <span>FAQ</span>
+        <span>Customer support</span>
+        <span>Guides</span>
+        <span>About us</span>
+    </div>  -->
+    
+</div>

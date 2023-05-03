@@ -1,0 +1,102 @@
+/* Styles for tab labels */
+.mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: #919dac;
+    font-weight: 400;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: #3f51b5;
+}
+
+
+:host {
+    display: block;
+    color: white;
+    padding: 2rem 3rem;
+    background-color: var(--dark-gray);
+
+}
+
+section {
+    margin-top: 2rem;
+}
+
+section h2 {
+    color: var(--green);
+}
+
+section h3 {
+    margin-top: 0.5rem;
+    color: var(--gray-light);
+}
+
+section ul {
+    margin-top: 0.5rem;
+    list-style: circle;
+    color: #fff;
+}
+
+/* PC */
+
+:host.pc section {
+    margin-left: 5rem;
+    position: relative;
+}
+
+:host.pc section h3 span:nth-child(2) {
+    color: white;
+}
+
+:host.pc section::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -60px;
+    top: 5px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--green);
+}
+
+:host.pc section::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    left: -50px;
+    top: 5%;
+    z-index: 1;
+    background-color: var(--gray-light);
+
+}
+
+:host.pc section:last-child:after {
+    height: 100%;
+}
+
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.btn{
+    background-color:#69a8f0;
+}
+
+.dark{
+    color: rgba(7, 14, 2, 0.856);
+}

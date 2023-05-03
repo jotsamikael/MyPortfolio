@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+//html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
+:root {
+    --green: #699ff0;
+    --green-light: #b9c2f6;
+    --gray-light: #BDBDBD;
+    --dark-gray: #263238;
+    --black: #212121;
+}
+
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+   // margin: 0 auto;
+   //margin: 0%;
+   padding: 0%;
+    max-width: 1500px;
+    outline: 0px solid white;
+    
+}
+
+h1 {
+    padding: 1rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--green);
+    //outline: 1px solid white;
+    font-family: 'Press Start 2P';
+    font-size: 26px;
+    margin-left: 2%;
+}
+
+h2 {
+    font-size: 22px;
+
+}
+
+h3 {
+   font-size: 18px;
+
+}
+h4 {
+ font-size: 16px;
+  
+}
+
+h5 {
+font-size: 14px;
+
+}
+
+div{
+    font-size: 14px;
+}
+html, body { height: 100%; }
+
+mat-icon {
+    vertical-align: middle;
+    color: #699ff0;
+}
+
+.logo {
+    justify-self: start;
+    margin-left: 6vw;
+    font-weight: bold;
+    font-size: x-large;
+    span:nth-child(2) {
+        color: #699ff0;
+    }
+}
+
+
+
+/* Icône burger */
+
+.burger-icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #699ff0;
+    margin: 6px 0;
+}
+
+
